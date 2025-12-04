@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/inter/Inter-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'InterMedium';
+  src: url('./assets/fonts/inter/Inter-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito/Nunito-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #FFFFFF;
+}
