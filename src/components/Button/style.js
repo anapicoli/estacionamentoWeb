@@ -1,17 +1,16 @@
+// src/components/Button/style.js
 import styled from "styled-components";
-import { colors } from "../../theme/theme";
+import theme from "../../theme/theme";
 
 export const ButtonStyled = styled.button`
-  background-color: ${colors.amareloVibrante};
-  border: none;
-  border-radius: 100px;
-  padding: 12px 25px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
+  background: ${(props) => (props.variant === "primary" ? theme.colors.marrom : theme.colors.amarelo_vibrante)};
+  color: ${theme.colors.branco};
+  font-family: ${theme.fonts.nunito};
   font-size: 25px;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 100px;
   cursor: pointer;
-  color: ${colors.preto};
-  &:hover {
-    opacity: 0.8;
-  }
+  box-shadow: ${theme.shadows.titulo};
+  &:disabled { opacity: 0.6; cursor: not-allowed; }
 `;

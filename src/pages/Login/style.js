@@ -1,30 +1,53 @@
+// src/pages/Login/style.js
 import styled from "styled-components";
-import { colors } from "../../theme/theme";
+import theme from "../../theme/theme";
 
-export const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Form = styled.div`
-  width: 635px;
-  padding: 50px;
-  border-radius: 30px;
-  background-color: ${colors.amareloPastel};
-  display: flex;
+export const LoginWrapper = styled.main`
+  display:flex;
   flex-direction: column;
-  gap: 25px;
+  justify-content: center;
+  padding: 40px 0 80px 0;
 `;
 
-export const LinkText = styled.span`
-  font-family: 'Inter', sans-serif;
+export const TitleRow = styled.h2`
+  font-family: ${theme.fonts.bebas};
+  font-size: 50px;
+  text-align:center;
+  width: 315px;
+  height: 85px;
+  background: ${theme.colors.amarelo_vibrante};
+  padding: 17px 113px;
+  border-radius: 30px;
+  box-shadow: ${theme.shadows.titulo};
+  margin-bottom: -21px;
+`;
+
+export const FormCard = styled.div`
+  width: 635px;
+  height: 456px;
+  background: ${theme.colors.amarelo_vibrante};
+  border-radius: 30px;
+  padding: 50px;
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+  align-items:flex-start;
+`;
+
+export const ActionsRow = styled.div`
+  margin-top: 25px;
+  display:flex;
+  align-items:center;
+  gap: 15px;
+`;
+
+export const SmallLink = styled.button`
+  margin-top: 15px;
+  background: transparent;
+  border: none;
+  font-family: ${theme.fonts.inter};
   font-size: 18px;
-  color: ${colors.preto};
+  color: ${theme.colors.preto};
   cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
+  align-self:flex-end;
 `;

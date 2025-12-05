@@ -1,20 +1,30 @@
+// src/pages/Cadastro/style.js
 import styled from "styled-components";
-import { colors } from "../../theme/theme";
+import theme from "../../theme/theme";
 
-export const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const CadastroWrapper = styled.main`
+  display:flex;
+  justify-content:center;
+  padding: 40px 0 80px 0;
 `;
 
-export const Form = styled.div`
+export const FormCard = styled.div`
   width: 635px;
-  padding: 50px;
+  background: ${theme.colors.amarelo_pastel};
   border-radius: 30px;
-  background-color: ${colors.amareloPastel};
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+  padding: 50px;
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+`;
+
+export const TitleRow = styled.h2`
+  font-family: ${theme.fonts.bebas};
+  font-size: 50px;
+  text-align:center;
+  width: 100%;
+  background: ${theme.colors.amarelo_vibrante};
+  padding: 17px 113px;
+  border-radius: 30px;
+  box-shadow: ${theme.shadows.titulo};
 `;

@@ -1,13 +1,24 @@
-import { CardContainer, Placa, InfoText, ButtonSaida } from "./style";
+// src/components/CardVeiculo/index.jsx
+import React from "react";
+import { Card, Plate, MetaRow, LabelSmall, ActionButton } from "./style";
+import { useNavigate } from "react-router-dom";
 
-export default function CardVeiculo({ veiculo, onRegistrarSaida }) {
+export default function CardVeiculo({ veiculo }) {
+  const navigate = useNavigate();
+
+  const abrirSaida = () => {
+    // usa rota de saida com a placa
+    navigate(`/saida/${veiculo.placa}`);
+  };
+
   return (
-    <CardContainer>
-      <Placa>{veiculo.placa}</Placa>
-      <InfoText>Entrada: {veiculo.horaEntrada} - {veiculo.dataEntrada}</InfoText>
-      <InfoText>Saída: {veiculo.horaSaida || "--"} - {veiculo.dataSaida || "--"}</InfoText>
-      <InfoText>Valor: R$ {veiculo.valor || "0,00"}</InfoText>
-      <ButtonSaida onClick={() => onRegistrarSaida(veiculo)}>Registrar saída</ButtonSaida>
-    </CardContainer>
+    <Card>
+      <Plate>{veiculo.placa}</Plate>
+      <MetaRow>
+        <LabelSmall>{veiculo.dataEntrada || veiculo.data || ""}</LabelSmall>
+        <LabelSmall>{veiculo.horaEntrada || veiculo.hora || ""}</LabelSmall>
+      </MetaRow>
+      <ActionButton onClick={abrirSaida}>Registrar saída</ActionButton>
+    </Card>
   );
 }

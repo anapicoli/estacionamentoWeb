@@ -1,37 +1,46 @@
+// src/components/CardVeiculo/style.js
 import styled from "styled-components";
-import { colors, shadows } from "../../theme/theme";
+import theme from "../../theme/theme";
 
-export const CardContainer = styled.div`
+export const Card = styled.div`
   width: 305px;
   height: 125px;
+  background: ${theme.colors.amarelo_pastel};
+  border-radius: 12px;
   padding: 20px;
-  background-color: ${colors.amareloPastel};
-  border-radius: 15px;
-  box-shadow: ${shadows.cardVeiculos};
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  box-shadow: ${theme.shadows.card};
 `;
 
-export const Placa = styled.h2`
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
+export const Plate = styled.div`
+  font-family: ${theme.fonts.inter};
+  font-weight: 600;
   font-size: 20px;
 `;
 
-export const InfoText = styled.span`
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
+export const MetaRow = styled.div`
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 `;
 
-export const ButtonSaida = styled.button`
+export const LabelSmall = styled.div`
+  font-family: ${theme.fonts.inter};
+  font-size: 18px;
+  color: ${theme.colors.cinza};
+`;
+
+export const ActionButton = styled.button`
   width: 130px;
   height: 25px;
   border-radius: 100px;
   border: none;
-  background-color: ${colors.marrom};
-  color: ${colors.branco};
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
   cursor: pointer;
+  font-family: ${theme.fonts.nunito};
+  font-size: 15px;
+  background: ${theme.colors.marrom};
+  color: white;
+  align-self: flex-end;
 `;

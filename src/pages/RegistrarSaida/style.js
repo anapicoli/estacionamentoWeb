@@ -1,18 +1,31 @@
+// src/pages/RegistrarSaida/style.js
 import styled from "styled-components";
+import theme from "../../theme/theme";
 
-export const Container = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  background-color: #FFFFFF;
+export const SaidaWrapper = styled.main`
+  display:flex;
+  justify-content:center;
+  padding: 40px 0 80px 0;
 `;
 
-export const Form = styled.div`
-  width: 635px;
-  margin: 50px auto;
-  padding: 50px;
+export const FormCard = styled.div`
+  width: 435px;
+  background: ${theme.colors.amarelo_pastel};
   border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  background-color: #FEF1B9;
+  padding: 30px;
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+  align-items:flex-start;
+`;
+
+export const TitleRow = styled.h2`
+  font-family: ${theme.fonts.bebas};
+  font-size: 36px;
+  text-align:center;
+  width: 100%;
+  background: ${theme.colors.amarelo_vibrante};
+  padding: 12px 50px;
+  border-radius: 30px;
+  box-shadow: ${theme.shadows.titulo};
 `;

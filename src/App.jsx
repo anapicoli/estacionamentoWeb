@@ -4,8 +4,10 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <AppRoutes />
+    <div className="app-container">
+      <div className="app-inner">
+        <AppRoutes />
+      </div>
     </div>
   );
 }
